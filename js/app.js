@@ -4,15 +4,16 @@
 
 const App = {
     /**
+     * step 1
      * Initialize Application
      */
     init() {
         console.log('SkillUp Safe Initializing...');
 
-        // Initialize GameState
+        // 2 Initialize GameState
         GameState.init();
 
-        // Check for saved user
+        // 3. Check for saved user
         const state = GameState.get();
 
         if (GameState.isOnboardingComplete()) {
@@ -23,12 +24,12 @@ const App = {
             Onboarding.render();
         }
 
-        // Add global event listeners if needed
+        // 4. Add global event listeners if needed
         this.setupGlobalListeners();
     },
 
     /**
-     * Setup global listeners
+     * 5. Setup global listeners
      */
     setupGlobalListeners() {
         // Handle browser back button
@@ -39,7 +40,7 @@ const App = {
     }
 };
 
-// Start the app when DOM is ready
+// 6. Start the app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     // Simulate a small loading delay for "app feel"
     const app = document.getElementById('app');
