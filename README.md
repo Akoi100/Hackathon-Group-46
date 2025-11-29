@@ -4,7 +4,7 @@ A mobile-first, gamified educational platform designed to empower vulnerable com
 
 ## 🎯 The Problem
 
-Many digital literacy resources are generic, not engaging, and fail to address the specific, culturally-relevant threats faced by women, girls, and other vulnerable groups online. This gap leaves them exposed to digital violence, scams, and privacy violations.
+Many digital literacy resources are generic, not engaging, and fail to address the specific, culturally-relevant threats faced by women, girls, men as well as other vulnerable groups online. This gap leaves them exposed to digital violence, scams, and privacy violations.
 
 ## 💡 Our Solution
 
@@ -38,10 +38,7 @@ By making learning fun and accessible, we empower users to navigate the digital 
 
 ## 🛠️ Tech Stack
 
-*   **Frontend:** React Native / Flutter (for cross-platform mobile development)
-*   **Backend:** Node.js / Python (Django/Flask)
-*   **Database:** Firebase / PostgreSQL
-*   **State Management:** Redux / Provider
+*   **Frontend:** html, css & javascript  (for cross-platform mobile development)
 *   **Version Control:** Git & GitHub
 
 ## 🚀 Getting Started
@@ -102,12 +99,13 @@ This project was built with ❤️ by:
 
 | Name | Role | Contact |
 | :--- | :--- | :--- |
-| **Abigael Cheptoo** | Project Lead / Content | +254706560495 |
-| **Abdulrahman Daud** | Backend Developer | +2349012973273 |
-| **Brian Kipchumba** | Full-Stack Developer | +254757710514 |
-| **Newton Kiogora** | Mobile Developer | +254745395981 |
+| **D'vock Akoi** | Project Lead/System Manager | +254704387762 |
+| **Abigael Cheptoo** | Presentation/Pitch Deck | +254706560495 |
+| **Brian Kipchumba** |  Frontend Development | +254757710514 |
+| **Abdulrahman Daud** | Quality Assurance | +2349012973273 |
+| **Newton Kiogora** | Content Planner | +254745395981 |
 | **Dorcas Wanjiru** | UI/UX Designer | +254740713823 |
-| **Dvock Akoi** | DevOps / QA | +254704387762 |
+
 
 ## 🙏 Acknowledgments
 
