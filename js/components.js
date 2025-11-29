@@ -1,7 +1,4 @@
-// ============================================
-// REUSABLE UI COMPONENTS
-// ============================================
-
+// Components object: a UI factory that creates reusable UI elements
 const Components = {
     /**
      * Create a button
@@ -18,10 +15,14 @@ const Components = {
     },
 
     /**
-     * Create a card
-     */
+      * Create a card component
+      * Cards are layout containers with optional sections
+      */
+
     createCard({ title, subtitle, body, footer, clickable = false, onClick = null }) {
         const card = document.createElement('div');
+
+        // Add base card styles + clickable modifier if needed
         card.className = `card ${clickable ? 'card-clickable' : ''}`;
 
         if (clickable && onClick) {
