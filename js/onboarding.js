@@ -80,10 +80,26 @@ const Onboarding = {
                             </li>
                         </ul>
                     </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                        <button id="start-btn" class="btn btn-primary btn-lg btn-block">Let's Get Started</button>
+                        
+                        <button id="shadow-btn" class="btn btn-secondary btn-block" style="border: 2px dashed var(--color-text-secondary);">
+                            🕵️ Enter Shadow Mode
+                            <div style="font-size: 0.8rem; opacity: 0.8; font-weight: normal;">Anonymous. No history. Wiped on exit.</div>
+                        </button>
+                    </div>
                 `;
-                const btn = Components.createButton("Let's Get Started", () => this.nextStep(), 'primary', 'lg');
-                btn.classList.add('btn-block');
-                content.appendChild(btn);
+
+                content.querySelector('#start-btn').onclick = () => {
+                    Storage.setMode('normal');
+                    this.nextStep();
+                };
+
+                content.querySelector('#shadow-btn').onclick = () => {
+                    Storage.setMode('shadow');
+                    Utils.showToast('Shadow Mode Active. No data will be saved.', 'info');
+                    this.nextStep();
+                };
                 break;
 
             case 'gender':
@@ -289,13 +305,12 @@ const Onboarding = {
                         title: 'Welcome Aboard!',
                         message: 'You\'ve earned your first reward for joining SkillUp Safe!',
                         coins: 100
+                    }, () => {
+                        // Transition to Village when popup is closed
+                        Village.render();
                     });
 
                     GameState.addCoins(100);
-
-                    setTimeout(() => {
-                        Village.render();
-                    }, 3000);
                 };
                 break;
         }

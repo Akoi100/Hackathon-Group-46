@@ -5,6 +5,9 @@
 const Modules = {
     // Module Content Data
     data: {
+        // ============================================
+        // GENERAL MODULES (ALL GENDERS)
+        // ============================================
         'privacy-house': {
             title: 'Privacy House',
             levels: [
@@ -285,6 +288,1018 @@ const Modules = {
                     reward: { coins: 150, message: "Privacy Guardian!", badge: 'privacy-badge' }
                 }
             ]
+        },
+
+        // ============================================
+        // MALE SPECIFIC MODULES
+        // ============================================
+        'accountability-gym': {
+            title: 'Accountability Gym',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Locker Room Talk',
+                    story: "You're in a group chat where boys are rating girls' photos and making crude comments. It feels wrong.",
+                    lesson: "Real strength is speaking up when others are being disrespectful. 'Locker room talk' is no excuse for harassment.",
+                    quiz: {
+                        question: "What is the courageous thing to do?",
+                        options: [
+                            "Join in so you fit in",
+                            "Say 'That's not cool' and leave the chat",
+                            "Screenshot it and laugh",
+                            "Ignore it completely"
+                        ],
+                        correct: 1,
+                        explanation: "Calling out bad behavior takes guts. It shows you respect others and yourself."
+                    },
+                    reward: { coins: 100, message: "Integrity Builder!" }
+                },
+                {
+                    id: 2,
+                    title: 'The "No" Means "No"',
+                    story: "You keep messaging a girl you like, but she hasn't replied in days. Your friend says 'try harder'.",
+                    lesson: "Persistence isn't always romantic; it can be harassment. Respect silence as a 'No'.",
+                    quiz: {
+                        question: "What should you do?",
+                        options: [
+                            "Keep messaging until she answers",
+                            "Stop messaging and respect her space",
+                            "Ask her friends why she's ignoring you",
+                            "Send an angry message"
+                        ],
+                        correct: 1,
+                        explanation: "Respecting boundaries is key to healthy relationships. If she wants to talk, she will."
+                    },
+                    reward: { coins: 100, message: "Boundary Respecter!" }
+                },
+                {
+                    id: 3,
+                    title: 'The Pressure Cooker',
+                    story: "Your friends are daring you to share a private photo someone sent you. They call you 'chicken' if you don't.",
+                    lesson: "Sharing private photos without consent is non-consensual image sharing (revenge porn). It's illegal and deeply hurtful.",
+                    quiz: {
+                        question: "How do you handle the peer pressure?",
+                        options: [
+                            "Share it just this once",
+                            "Refuse firmly. It's a crime and a betrayal of trust.",
+                            "Show it but don't send it",
+                            "Make fun of the person in the photo"
+                        ],
+                        correct: 1,
+                        explanation: "Being a man means protecting trust, not breaking it for a cheap laugh."
+                    },
+                    reward: { coins: 150, badge: 'ally-badge', message: 'True Ally!' }
+                }
+            ]
+        },
+
+        // ============================================
+        // FEMALE SPECIFIC MODULES
+        // ============================================
+        'survivor-library': {
+            title: 'Survivor Library',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Unwanted DM',
+                    story: "You receive a message from a stranger that makes you feel unsafe and uncomfortable.",
+                    lesson: "You do not owe anyone a reply. Your safety comes first. Trust your gut feeling.",
+                    quiz: {
+                        question: "What is your right in this situation?",
+                        options: [
+                            "I must be polite and reply",
+                            "I have the right to block and ignore them immediately",
+                            "I should ask them why they messaged",
+                            "I should tell them where I live"
+                        ],
+                        correct: 1,
+                        explanation: "You have total control over who you talk to. Block without guilt."
+                    },
+                    reward: { coins: 100, message: "Boundary Queen!" }
+                },
+                {
+                    id: 2,
+                    title: 'The Gaslight',
+                    story: "Someone you know online tells you that you are 'crazy' or 'imagining things' when you get upset about their mean jokes.",
+                    lesson: "Gaslighting is a form of manipulation to make you doubt your reality. Your feelings are valid.",
+                    quiz: {
+                        question: "How do you respond to gaslighting?",
+                        options: [
+                            "Apologize for being sensitive",
+                            "Trust your feelings and distance yourself from that person",
+                            "Argue until they agree",
+                            "Believe them"
+                        ],
+                        correct: 1,
+                        explanation: "Trust yourself. If someone constantly makes you feel small or crazy, they are not a friend."
+                    },
+                    reward: { coins: 100, message: "Inner Strength!" }
+                },
+                {
+                    id: 3,
+                    title: 'Healing Stories',
+                    story: "You read a story about a girl who overcame cyberbullying and started a support group.",
+                    lesson: "You are not alone. There is strength in community and sharing your story when you are ready.",
+                    quiz: {
+                        question: "What can help you heal?",
+                        options: [
+                            "Keeping it a secret forever",
+                            "Connecting with supportive communities and trusted friends",
+                            "Isolating yourself",
+                            "Revenge"
+                        ],
+                        correct: 1,
+                        explanation: "Resilience is built together. Seeking support is a sign of bravery, not weakness."
+                    },
+                    reward: { coins: 150, badge: 'resilience-badge', message: 'Resilience Rising!' }
+                }
+            ]
+        },
+        'defense-dojo': {
+            title: 'Self-Defense Dojo',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Block Button',
+                    story: "An ex-boyfriend keeps creating new accounts to message you after you broke up.",
+                    lesson: "This is harassment. You have the right to digital peace. Use the block button liberally.",
+                    quiz: {
+                        question: "What is the most effective tool against unwanted contact?",
+                        options: [
+                            "Yelling at them",
+                            "The Block and Report buttons",
+                            "Deactivating your account",
+                            "Changing your name"
+                        ],
+                        correct: 1,
+                        explanation: "Blocking stops the noise. Reporting alerts the platform to the harassment."
+                    },
+                    reward: { coins: 100, message: "Shield Up!" }
+                },
+                {
+                    id: 2,
+                    title: 'Evidence Locker',
+                    story: "You are receiving threatening messages and want to go to the police.",
+                    lesson: "Documentation is key. Screenshots, URLs, and timestamps are your evidence.",
+                    quiz: {
+                        question: "What should you save before blocking?",
+                        options: [
+                            "Nothing, just delete it",
+                            "Screenshots of messages and the profile URL",
+                            "Just the text",
+                            "A drawing of the screen"
+                        ],
+                        correct: 1,
+                        explanation: "Always keep receipts. They are proof if you need to take legal action."
+                    },
+                    reward: { coins: 100, message: "Evidence Secured!" }
+                },
+                {
+                    id: 3,
+                    title: 'Location Lockdown',
+                    story: "You realize your fitness app is sharing your running route map publicly.",
+                    lesson: "Location data can reveal your routine. Review privacy settings on ALL apps, especially fitness and photo apps.",
+                    quiz: {
+                        question: "How should you set your location sharing?",
+                        options: [
+                            "Public for everyone",
+                            "Private or Friends Only",
+                            "Broadcast to the world",
+                            "It doesn't matter"
+                        ],
+                        correct: 1,
+                        explanation: "Your movements are your business. Keep your location private to stay safe physically."
+                    },
+                    reward: { coins: 150, badge: 'guardian-badge', message: 'Digital Guardian!' }
+                }
+            ]
+        },
+
+        // ============================================
+        // OTHER/NON-BINARY SPECIFIC MODULES
+        // ============================================
+        'identity-oasis': {
+            title: 'Identity Oasis',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Real Name Policy',
+                    story: "A social platform demands you use your legal name, but that's not who you are anymore.",
+                    lesson: "Navigating 'real name' policies can be dangerous for trans and non-binary folks. Look for platforms that respect your chosen name.",
+                    quiz: {
+                        question: "Why might 'real name' policies be harmful?",
+                        options: [
+                            "They are boring",
+                            "They can out people against their will",
+                            "They cost money",
+                            "They are too short"
+                        ],
+                        correct: 1,
+                        explanation: "Your identity is yours to define. Being forced to use a deadname can be unsafe and painful."
+                    },
+                    reward: { coins: 100, message: "Identity Valid!" }
+                },
+                {
+                    id: 2,
+                    title: 'Finding Your Tribe',
+                    story: "You feel isolated in your town but find a vibrant LGBTQ+ community on a discord server.",
+                    lesson: "The internet can be a lifeline. Finding safe, moderated communities can provide essential support.",
+                    quiz: {
+                        question: "What makes an online community safe?",
+                        options: [
+                            "No rules at all",
+                            "Active moderation and clear rules against hate speech",
+                            "Anyone can post anything",
+                            "It's anonymous only"
+                        ],
+                        correct: 1,
+                        explanation: "Good moderation keeps spaces safe from trolls and hate speech."
+                    },
+                    reward: { coins: 100, message: "Community Found!" }
+                },
+                {
+                    id: 3,
+                    title: 'The Troll Attack',
+                    story: "A hate group targets your profile with hateful comments because of your pronouns.",
+                    lesson: "This is a targeted attack (brigading). Lock your account, report the group, and ask allies for help.",
+                    quiz: {
+                        question: "What should you do during a targeted attack?",
+                        options: [
+                            "Fight every single person",
+                            "Go private (lock account) and report",
+                            "Delete your account forever",
+                            "Give them your address"
+                        ],
+                        correct: 1,
+                        explanation: "Protect your peace. Going private stops the flood, and reporting helps remove the attackers."
+                    },
+                    reward: { coins: 150, badge: 'pride-badge', message: 'Unapologetically You!' }
+                }
+            ]
+        },
+        'survival-playbook': {
+            title: 'Survival Playbook',
+            levels: [
+                {
+                    id: 1,
+                    title: 'Emergency Contacts',
+                    story: "In a crisis, you need to know who to call immediately.",
+                    lesson: "Identify 3 trusted people you can contact in an emergency.",
+                    quiz: {
+                        question: "Who is a good emergency contact?",
+                        options: ["A stranger", "A trusted friend or family member", "Someone far away", "A social media follower"],
+                        correct: 1,
+                        explanation: "Choose someone who is reliable and can help you quickly."
+                    },
+                    reward: { coins: 50, message: "Step 1 Complete!" }
+                },
+                {
+                    id: 2,
+                    title: 'Safe Spaces',
+                    story: "If you need to leave quickly, where can you go?",
+                    lesson: "Plan a safe location (friend's house, shelter, public place) ahead of time.",
+                    quiz: {
+                        question: "What makes a space safe?",
+                        options: ["It's crowded", "It's unknown to the abuser", "It's dark", "It's far away only"],
+                        correct: 1,
+                        explanation: "A safe space should be somewhere the abuser cannot easily find or reach you."
+                    },
+                    reward: { coins: 50, message: "Step 2 Complete!" }
+                },
+                {
+                    id: 3,
+                    title: 'Digital Exit',
+                    story: "You need to browse for help without leaving a trace.",
+                    lesson: "Use Incognito/Private mode or 'Shadow Mode' when searching for help.",
+                    quiz: {
+                        question: "Why use Incognito mode?",
+                        options: ["It's faster", "It doesn't save history", "It's colorful", "It's cheaper"],
+                        correct: 1,
+                        explanation: "Preventing history storage keeps your plans private."
+                    },
+                    reward: { coins: 100, badge: 'planner-badge', message: 'Safety Plan Ready!' }
+                }
+            ]
+        },
+
+        // ============================================
+        // NEW MALE MODULES (4 additional)
+        // ============================================
+        'emotional-dojo': {
+            title: 'Emotional Dojo',
+            levels: [
+                {
+                    id: 1,
+                    title: 'Beyond Anger',
+                    story: "You're feeling hurt because your friend canceled plans again, but you only know how to show anger.",
+                    lesson: "Expressing vulnerability is strength, not weakness. 'I feel hurt' is more honest than 'Whatever, I don't care'.",
+                    quiz: {
+                        question: "How can you communicate better?",
+                        options: [
+                            "Hide your feelings and act tough",
+                            "Say 'I feel disappointed when plans change'",
+                            "Get angry and yell",
+                            "Ghost them completely"
+                        ],
+                        correct: 1,
+                        explanation: "Naming your true emotions builds deeper connections and self-awareness."
+                    },
+                    reward: { coins: 100, message: "Emotional Strength!" }
+                },
+                {
+                    id: 2,
+                    title: 'The Pressure to Perform',
+                    story: "You're struggling in school but feel like you can't ask for help because 'men should figure it out alone'.",
+                    lesson: "Asking for help is a sign of intelligence, not failure. No one succeeds alone.",
+                    quiz: {
+                        question: "What's the wise choice?",
+                        options: [
+                            "Suffer in silence to be 'manly'",
+                            "Reach out to a teacher or friend for support",
+                            "Give up entirely",
+                            "Pretend everything is fine"
+                        ],
+                        correct: 1,
+                        explanation: "Real men build networks of support. Isolation is a trap."
+                    },
+                    reward: { coins: 100, message: "Wisdom Unlocked!" }
+                },
+                {
+                    id: 3,
+                    title: 'Breaking the Mold',
+                    story: "Your friends mock you for liking art or music instead of sports. It stings.",
+                    lesson: "Your interests don't define your masculinity. Being true to yourself is the ultimate strength.",
+                    quiz: {
+                        question: "How do you respond?",
+                        options: [
+                            "Give up your hobbies to fit in",
+                            "Own your passions proudly",
+                            "Make fun of theirs back",
+                            "Lie about liking sports"
+                        ],
+                        correct: 1,
+                        explanation: "Authenticity is magnetic. The right people will respect you for being real."
+                    },
+                    reward: { coins: 150, badge: 'authentic-self', message: 'Authentic Warrior!' }
+                }
+            ]
+        },
+        'consent-commander': {
+            title: 'Consent Commander',
+            levels: [
+                {
+                    id: 1,
+                    title: 'Enthusiastic Yes',
+                    story: "You're about to share a funny but slightly embarrassing photo of your friend. They say 'I guess it's okay...' hesitantly.",
+                    lesson: "Consent isn't just 'not saying no'. Look for an enthusiastic, clear YES.",
+                    quiz: {
+                        question: "Should you post the photo?",
+                        options: [
+                            "Yes, they said okay",
+                            "No, hesitation means they're uncomfortable",
+                            "Yes, but tag them so they can untag",
+                            "Yes, it's funny"
+                        ],
+                        correct: 1,
+                        explanation: "Anything less than enthusiastic is a no. Always err on the side of respect."
+                    },
+                    reward: { coins: 100, message: "Consent Champion!" }
+                },
+                {
+                    id: 2,
+                    title: 'The Gray Area',
+                    story: "Someone said 'yes' to hanging out, but now they seem distant and uncomfortable during the chat.",
+                    lesson: "Consent can be withdrawn at ANY time. Pay attention to body language and energy, not just words.",
+                    quiz: {
+                        question: "What's the right move?",
+                        options: [
+                            "Ignore the vibe, they said yes",
+                            "Check in: 'You seem uncomfortable, want to stop?'",
+                            "Keep going, they'll warm up",
+                            "Get annoyed"
+                        ],
+                        correct: 1,
+                        explanation: "Ongoing consent means constant awareness and respect for the other person's comfort."
+                    },
+                    reward: { coins: 100, message: "Respect Master!" }
+                },
+                {
+                    id: 3,
+                    title: 'Digital Boundaries',
+                    story: "You want to screenshot a private conversation and show a friend for advice. Is that okay?",
+                    lesson: "Private messages are given in trust. Sharing them without permission violates consent.",
+                    quiz: {
+                        question: "What should you do?",
+                        options: [
+                            "Screenshot and share",
+                            "Ask permission first",
+                            "Paraphrase without names",
+                            "Show just your friend"
+                        ],
+                        correct: 1,
+                        explanation: "Trust is earned by protecting confidences. Always ask before sharing private info."
+                    },
+                    reward: { coins: 150, badge: 'consent-guru', message: 'Consent Guru!' }
+                }
+            ]
+        },
+        'digital-gentleman': {
+            title: 'Digital Gentleman',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The DM Approach',
+                    story: "You want to message someone you find interesting but don't know well. What's your opening line?",
+                    lesson: "Respect starts with how you introduce yourself. Be genuine, not entitled or creepy.",
+                    quiz: {
+                        question: "Best opening message?",
+                        options: [
+                            "'Hey beautiful, send pics'",
+                            "'Hi! I liked your post about [topic]. What got you into that?'",
+                            "'You're too pretty to be single'",
+                            "A generic copy-paste pickup line"
+                        ],
+                        correct: 1,
+                        explanation: "Show genuine interest in who they are, not just what they look like."
+                    },
+                    reward: { coins: 100, message: "Respectful Intro!" }
+                },
+                {
+                    id: 2,
+                    title: 'When They Say No',
+                    story: "You asked someone out online and they politely declined. What now?",
+                    lesson: "Rejection is not a challenge or an insult. Graceful acceptance shows maturity.",
+                    quiz: {
+                        question: "How do you respond?",
+                        options: [
+                            "'Your loss'",
+                            "'No problem! Thanks for being honest. Good luck!'",
+                            "'Why not? Give me a chance'",
+                            "Call them names"
+                        ],
+                        correct: 1,
+                        explanation: "How you handle 'no' reveals your character. Be kind and move on."
+                    },
+                    reward: { coins: 100, message: "Grace Under Fire!" }
+                },
+                {
+                    id: 3,
+                    title: 'Calling Out Bros',
+                    story: "A guy in your group is being disrespectful to women in the chat. Everyone's quiet.",
+                    lesson: "Being a gentleman means calling out disrespect, even when it's uncomfortable.",
+                    quiz: {
+                        question: "What's your move?",
+                        options: [
+                            "Stay silent to avoid drama",
+                            "Say 'That's not cool, man. Let's keep it respectful'",
+                            "Laugh along",
+                            "Leave the group quietly"
+                        ],
+                        correct: 1,
+                        explanation: "Silence is complicity. Real men stand up for what's right."
+                    },
+                    reward: { coins: 150, badge: 'gentleman-badge', message: 'True Gentleman!' }
+                }
+            ]
+        },
+        'mental-pitstop': {
+            title: 'Mental Pitstop',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Weight of Expectations',
+                    story: "You're feeling overwhelmed and anxious but think 'I should just tough it out'.",
+                    lesson: "Mental health struggles are not weakness. Your mind needs care just like your body.",
+                    quiz: {
+                        question: "What's the healthiest response?",
+                        options: [
+                            "Ignore it and push through",
+                            "Talk to someone you trust or seek professional help",
+                            "Hide it completely",
+                            "Deal with it alone forever"
+                        ],
+                        correct: 1,
+                        explanation: "Seeking help is a sign of self-awareness and strength, not failure."
+                    },
+                    reward: { coins: 100, message: "Self-Care Warrior!" }
+                },
+                {
+                    id: 2,
+                    title: 'Online Stress Signals',
+                    story: "You notice you feel worse about yourself after scrolling social media. Is this normal?",
+                    lesson: "Social media can fuel comparison and anxiety. Recognizing this is the first step to healthier habits.",
+                    quiz: {
+                        question: "What can you do?",
+                        options: [
+                            "Scroll more to distract yourself",
+                            "Take breaks, unfollow accounts that make you feel bad",
+                            "Assume you're the problem",
+                            "Never use social media again"
+                        ],
+                        correct: 1,
+                        explanation: "Curating your digital environment protects your mental health."
+                    },
+                    reward: { coins: 100, message: "Digital Wellness!" }
+                },
+                {
+                    id: 3,
+                    title: 'Supporting Others',
+                    story: "A friend hints they're struggling mentally but you don't know what to say.",
+                    lesson: "You don't need perfect words. Listening and showing you care is enough.",
+                    quiz: {
+                        question: "Best response?",
+                        options: [
+                            "'Just be positive!'",
+                            "'I'm here if you want to talk. You're not alone.'",
+                            "Change the subject",
+                            "'Man up'"
+                        ],
+                        correct: 1,
+                        explanation: "Being there for others creates a culture where asking for help is normal."
+                    },
+                    reward: { coins: 150, badge: 'supporter-badge', message: 'Mental Health Ally!' }
+                }
+            ]
+        },
+
+        // ============================================
+        // NEW FEMALE MODULES (4 additional)
+        // ============================================
+        'financial-fortress': {
+            title: 'Financial Fortress',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Romance Scam',
+                    story: "Someone you've been chatting with online says they need money urgently for a 'family emergency'. You've never met in person.",
+                    lesson: "Romance scammers build trust then ask for money. Real relationships don't start with financial requests.",
+                    quiz: {
+                        question: "What should you do?",
+                        options: [
+                            "Send the money to help",
+                            "Block them immediately",
+                            "Send a small amount to test",
+                            "Ask for their bank details"
+                        ],
+                        correct: 1,
+                        explanation: "This is a classic scam. Never send money to someone you haven't met in person."
+                    },
+                    reward: { coins: 100, message: "Scam Avoided!" }
+                },
+                {
+                    id: 2,
+                    title: 'Protecting Your Accounts',
+                    story: "A 'bank' emails asking you to verify your password because of 'suspicious activity'.",
+                    lesson: "Banks never ask for passwords via email or text. This is phishing.",
+                    quiz: {
+                        question: "How do you respond?",
+                        options: [
+                            "Click the link and enter your password",
+                            "Ignore it and call your bank directly using their official number",
+                            "Reply with your password",
+                            "Forward it to friends"
+                        ],
+                        correct: 1,
+                        explanation: "Always verify security requests through official channels, never through links in emails."
+                    },
+                    reward: { coins: 100, message: "Account Secured!" }
+                },
+                {
+                    id: 3,
+                    title: 'Financial Independence',
+                    story: "Someone offers to 'manage your money' for you online, promising huge returns.",
+                    lesson: "Your financial independence is power. Never give someone else control of your money.",
+                    quiz: {
+                        question: "What's the safest choice?",
+                        options: [
+                            "Give them access to try it out",
+                            "Keep control of your own accounts and seek advice from licensed professionals only",
+                            "Share your PIN 'just in case'",
+                            "Let them invest a small amount"
+                        ],
+                        correct: 1,
+                        explanation: "Financial autonomy protects you from abuse and scams. Your money, your control."
+                    },
+                    reward: { coins: 150, badge: 'finance-queen', message: 'Financial Queen!' }
+                }
+            ]
+        },
+        'career-climber': {
+            title: 'Career Climber',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Uncomfortable DM',
+                    story: "A professional contact sends you a message late at night with flirty undertones. You need this connection for work.",
+                    lesson: "Professional boundaries exist for a reason. You can say no and still advance your career.",
+                    quiz: {
+                        question: "How do you handle this?",
+                        options: [
+                            "Ignore your discomfort and respond",
+                            "Set a clear boundary: 'I prefer to keep our communication professional'",
+                            "Flirt back to keep the connection",
+                            "Never speak to them again"
+                        ],
+                        correct: 1,
+                        explanation: "Protecting your boundaries maintains your dignity and professionalism."
+                    },
+                    reward: { coins: 100, message: "Boundary Pro!" }
+                },
+                {
+                    id: 2,
+                    title: 'Public vs Private Profile',
+                    story: "You're job hunting and realize recruiters can see your personal social media.",
+                    lesson: "Your digital footprint affects your career. Separate personal and professional carefully.",
+                    quiz: {
+                        question: "Best practice?",
+                        options: [
+                            "Delete all social media",
+                            "Make personal accounts private, create professional profiles",
+                            "Post whatever you want",
+                            "Use a fake name everywhere"
+                        ],
+                        correct: 1,
+                        explanation: "Strategic privacy protects your personal life while building your professional brand."
+                    },
+                    reward: { coins: 100, message: "Brand Builder!" }
+                },
+                {
+                    id: 3,
+                    title: 'Documenting Harassment',
+                    story: "A colleague is making inappropriate comments on your work posts. You want to report it.",
+                    lesson: "Evidence is power. Screenshot, date, and document before reporting.",
+                    quiz: {
+                        question: "What's your first step?",
+                        options: [
+                            "Confront them publicly",
+                            "Screenshot everything with dates and report to HR/platform",
+                            "Delete the posts",
+                            "Ignore it and hope it stops"
+                        ],
+                        correct: 1,
+                        explanation: "Documentation creates a paper trail that protects you and holds others accountable."
+                    },
+                    reward: { coins: 150, badge: 'career-shield', message: 'Career Shield!' }
+                }
+            ]
+        },
+        'sisterhood-signal': {
+            title: 'Sisterhood Signal',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Subtle Check-In',
+                    story: "You notice a friend's posts have gotten darker and sadder. She's not responding to messages.",
+                    lesson: "Sometimes people need help but can't ask. A simple 'I'm here' can save a life.",
+                    quiz: {
+                        question: "What's the caring response?",
+                        options: [
+                            "Assume she's fine",
+                            "Send a heartfelt message: 'I noticed you seem down. Want to talk? No pressure.'",
+                            "Post about it publicly",
+                            "Tell everyone you're worried"
+                        ],
+                        correct: 1,
+                        explanation: "Direct, private support respects her privacy while offering a lifeline."
+                    },
+                    reward: { coins: 100, message: "Sister Support!" }
+                },
+                {
+                    id: 2,
+                    title: 'Girl Code Online',
+                    story: "You see a girl being harassed in comments. You don't know her.",
+                    lesson: "Digital solidarity matters. Supporting strangers builds a safer space for all women.",
+                    quiz: {
+                        question: "What can you do?",
+                        options: [
+                            "Scroll past",
+                            "Comment support: 'That's not okay' and report the harassment",
+                            "Join the pile-on",
+                            "DM the harasser"
+                        ],
+                        correct: 1,
+                        explanation: "Public allyship discourages harassers and shows the victim she's not alone."
+                    },
+                    reward: { coins: 100, message: "Digital Sister!" }
+                },
+                {
+                    id: 3,
+                    title: 'Building Your Circle',
+                    story: "You want to find supportive online communities but worry about safety.",
+                    lesson: "Safe spaces exist. Look for vetted, moderated groups with clear rules against harassment.",
+                    quiz: {
+                        question: "What makes a community safe?",
+                        options: [
+                            "No rules, complete freedom",
+                            "Active moderation, anti-harassment policies, and verification",
+                            "Male admins only",
+                            "Anonymous and unmoderated"
+                        ],
+                        correct: 1,
+                        explanation: "Good moderation and clear boundaries create spaces where women can thrive."
+                    },
+                    reward: { coins: 150, badge: 'sisterhood-badge', message: 'Sisterhood Strong!' }
+                }
+            ]
+        },
+        'wellness-garden': {
+            title: 'Wellness Garden',
+            levels: [
+                {
+                    id: 1,
+                    title: 'The Comparison Trap',
+                    story: "You're scrolling Instagram and feel worse about your life with each perfect post you see.",
+                    lesson: "Social media shows highlight reels, not reality. Your worth isn't measured in likes.",
+                    quiz: {
+                        question: "How do you break the cycle?",
+                        options: [
+                            "Keep scrolling to feel worse",
+                            "Take a break, unfollow accounts that trigger comparison",
+                            "Buy things to feel better",
+                            "Post more to compete"
+                        ],
+                        correct: 1,
+                        explanation: "Protecting your mental space is self-care, not weakness."
+                    },
+                    reward: { coins: 100, message: "Self-Love Activated!" }
+                },
+                {
+                    id: 2,
+                    title: 'Digital Detox',
+                    story: "You realize you check your phone 100+ times a day and can't sleep without scrolling.",
+                    lesson: "Tech addiction is real. Setting boundaries with devices improves sleep, mood, and focus.",
+                    quiz: {
+                        question: "What's a healthy boundary?",
+                        options: [
+                            "Sleep with your phone under your pillow",
+                            "Set a 'no screens 1 hour before bed' rule",
+                            "Check notifications every 2 minutes",
+                            "Never use your phone again"
+                        ],
+                        correct: 1,
+                        explanation: "Small boundaries create big improvements in your wellbeing."
+                    },
+                    reward: { coins: 100, message: "Balance Master!" }
+                },
+                {
+                    id: 3,
+                    title: 'Nourishing Your Feed',
+                    story: "You want your social media to feel uplifting instead of draining.",
+                    lesson: "You control what you consume. Curate your feed like you'd curate your friendships.",
+                    quiz: {
+                        question: "What's the wellness strategy?",
+                        options: [
+                            "Follow everyone who follows you",
+                            "Follow accounts that inspire, educate, and make you feel good",
+                            "Only follow celebrities",
+                            "Never unfollow anyone"
+                        ],
+                        correct: 1,
+                        explanation: "Your feed is your mental diet. Choose nourishment over junk."
+                    },
+                    reward: { coins: 150, badge: 'wellness-warrior', message: 'Wellness Warrior!' }
+                }
+            ]
+        },
+
+        // ============================================
+        // NEW OTHER/NON-BINARY MODULES (4 additional)
+        // ============================================
+        'pronoun-power': {
+            title: 'Pronoun Power',
+            levels: [
+                {
+                    id: 1,
+                    title: 'Taking Up Space',
+                    story: "You add your pronouns (they/them) to your bio and someone mocks you for it.",
+                    lesson: "Your pronouns are not up for debate. Visibility matters even when it's uncomfortable.",
+                    quiz: {
+                        question: "How do you respond?",
+                        options: [
+                            "Remove your pronouns to avoid conflict",
+                            "Keep them up. Your identity is valid.",
+                            "Argue with everyone",
+                            "Make your profile private"
+                        ],
+                        correct: 1,
+                        explanation: "Living visibly helps others and affirms your own identity. You belong."
+                    },
+                    reward: { coins: 100, message: "Visible & Valid!" }
+                },
+                {
+                    id: 2,
+                    title: 'Correcting Misgendering',
+                    story: "Someone keeps using the wrong pronouns for you online, even after you corrected them.",
+                    lesson: "Persistent misgendering is disrespect, possibly harassment. You have the right to enforce your boundaries.",
+                    quiz: {
+                        question: "What's your right?",
+                        options: [
+                            "Accept it to keep the peace",
+                            "Block them or report if it continues",
+                            "Blame yourself",
+                            "Never correct anyone"
+                        ],
+                        correct: 1,
+                        explanation: "Respecting pronouns is basic decency. Don't tolerate deliberate harm."
+                    },
+                    reward: { coins: 100, message: "Boundary Enforcer!" }
+                },
+                {
+                    id: 3,
+                    title: 'Educate or Eliminate',
+                    story: "A well-meaning person asks intrusive questions about your gender identity.",
+                    lesson: "You don't owe anyone your story or education. You can choose when and how to share.",
+                    quiz: {
+                        question: "What's your choice?",
+                        options: [
+                            "Answer every personal question",
+                            "Say 'I appreciate your curiosity but I'm not comfortable discussing that'",
+                            "Get angry",
+                            "Delete your account"
+                        ],
+                        correct: 1,
+                        explanation: "Your identity is yours to share or protect. Boundaries are healthy."
+                    },
+                    reward: { coins: 150, badge: 'pronoun-pride', message: 'Pronoun Pride!' }
+                }
+            ]
+        },
+        'history-haven': {
+            title: 'History Haven',
+            levels: [
+                {
+                    id: 1,
+                    title: 'Knowing Your Roots',
+                    story: "You stumble upon the history of the Stonewall Riots and realize how recent the fight for LGBTQ+ rights is.",
+                    lesson: "Your rights were fought for by brave people who came before you. Knowing this history empowers you.",
+                    quiz: {
+                        question: "Why does LGBTQ+ history matter?",
+                        options: [
+                            "It doesn't",
+                            "It shows resilience and reminds us to protect our rights",
+                            "It's just old news",
+                            "Only for historians"
+                        ],
+                        correct: 1,
+                        explanation: "Those who don't know history are doomed to repeat it. Your history is your power."
+                    },
+                    reward: { coins: 100, message: "Knowledge Is Power!" }
+                },
+                {
+                    id: 2,
+                    title: 'Digital Archives',
+                    story: "You find online spaces preserving queer history and stories that were once erased.",
+                    lesson: "The internet can be a tool for preservation and visibility. Seek out these resources.",
+                    quiz: {
+                        question: "What can digital archives do?",
+                        options: [
+                            "Nothing important",
+                            "Preserve stories, educate, and create community",
+                            "Only for academics",
+                            "Replace real activism"
+                        ],
+                        correct: 1,
+                        explanation: "Digital spaces keep queer history alive and accessible to new generations."
+                    },
+                    reward: { coins: 100, message: "Historian!" }
+                },
+                {
+                    id: 3,
+                    title: 'Sharing Your Story',
+                    story: "You consider sharing your coming-out story online to help others.",
+                    lesson: "Your story has power, but share only what feels safe. Visibility is a gift, not an obligation.",
+                    quiz: {
+                        question: "What's the balanced approach?",
+                        options: [
+                            "Share everything publicly",
+                            "Share what you're comfortable with, when you're ready, with chosen audiences",
+                            "Never share anything",
+                            "Only share anonymously"
+                        ],
+                        correct: 1,
+                        explanation: "You control your narrative. Share on your terms, for your healing and others' hope."
+                    },
+                    reward: { coins: 150, badge: 'storyteller-badge', message: 'Storyteller!' }
+                }
+            ]
+        },
+        'resource-radar': {
+            title: 'Resource Radar',
+            levels: [
+                {
+                    id: 1,
+                    title: 'Finding Affirming Healthcare',
+                    story: "You need to find a doctor who understands non-binary healthcare needs.",
+                    lesson: "LGBTQ+-affirming healthcare exists. Online directories and communities can help you find it.",
+                    quiz: {
+                        question: "Where can you start?",
+                        options: [
+                            "Give up on healthcare",
+                            "Search LGBTQ+ health directories or ask in safe online communities",
+                            "See any random doctor",
+                            "Avoid doctors forever"
+                        ],
+                        correct: 1,
+                        explanation: "You deserve healthcare that respects your identity. Resources exist to help you find it."
+                    },
+                    reward: { coins: 100, message: "Health Advocate!" }
+                },
+                {
+                    id: 2,
+                    title: 'Legal Name Changes',
+                    story: "You want to legally change your name but don't know where to start.",
+                    lesson: "Many online resources and LGBTQ+ legal aid organizations guide you through the process for free or low-cost.",
+                    quiz: {
+                        question: "Best first step?",
+                        options: [
+                            "Assume it's impossible",
+                            "Search for LGBTQ+ legal aid in your area or online guides",
+                            "Try to do it without research",
+                            "Give up your name"
+                        ],
+                        correct: 1,
+                        explanation: "Legal resources exist to help you live authentically. Research empowers you."
+                    },
+                    reward: { coins: 100, message: "Legal Navigator!" }
+                },
+                {
+                    id: 3,
+                    title: 'Crisis Hotlines',
+                    story: "You're in a dark place and need immediate support.",
+                    lesson: "LGBTQ+-specific crisis lines exist (like Trevor Project). They understand your unique struggles.",
+                    quiz: {
+                        question: "What should you know?",
+                        options: [
+                            "No one can help",
+                            "LGBTQ+ crisis hotlines are free, confidential, and available 24/7",
+                            "Asking for help is shameful",
+                            "Only cisgender people can use hotlines"
+                        ],
+                        correct: 1,
+                        explanation: "You are never alone. Specialized support exists and they want to help you."
+                    },
+                    reward: { coins: 150, badge: 'resource-finder', message: 'Resource Hero!' }
+                }
+            ]
+        },
+        'expression-studio': {
+            title: 'Expression Studio',
+            levels: [
+                {
+                    id: 1,
+                    title: 'Art as Armor',
+                    story: "You want to express your identity through digital art but fear judgment.",
+                    lesson: "Creative expression is healing and resistance. Your art matters.",
+                    quiz: {
+                        question: "What empowers you?",
+                        options: [
+                            "Hide your art forever",
+                            "Create and share in safe, supportive spaces",
+                            "Only create what others approve of",
+                            "Never make art"
+                        ],
+                        correct: 1,
+                        explanation: "Art is how we make sense of the world. Your voice deserves to be heard."
+                    },
+                    reward: { coins: 100, message: "Creative Soul!" }
+                },
+                {
+                    id: 2,
+                    title: 'Finding Your Aesthetic',
+                    story: "You experiment with your online persona, trying different looks and vibes.",
+                    lesson: "The digital world lets you explore identity safely. There's no 'wrong' way to express yourself.",
+                    quiz: {
+                        question: "What's true about self-expression?",
+                        options: [
+                            "You must pick one style forever",
+                            "You can evolve and experiment as much as you want",
+                            "Others must approve your choices",
+                            "Expression is frivolous"
+                        ],
+                        correct: 1,
+                        explanation: "Identity is a journey, not a destination. Explore freely."
+                    },
+                    reward: { coins: 100, message: "Authentic Creator!" }
+                },
+                {
+                    id: 3,
+                    title: 'Building Your Platform',
+                    story: "You want to start creating queer content online but worry about backlash.",
+                    lesson: "Your voice adds to a chorus of resistance and hope. Safety first, but don't silence yourself entirely.",
+                    quiz: {
+                        question: "How do you start safely?",
+                        options: [
+                            "Never create anything",
+                            "Use privacy settings, build a supportive audience first, and have a safety plan",
+                            "Post recklessly",
+                            "Only create in secret"
+                        ],
+                        correct: 1,
+                        explanation: "Strategic visibility protects you while amplifying queer joy and resilience."
+                    },
+                    reward: { coins: 150, badge: 'creator-badge', message: 'Creator Unleashed!' }
+                }
+            ]
         }
     },
 
@@ -295,6 +1310,7 @@ const Modules = {
         const moduleData = this.data[moduleId];
         if (!moduleData) {
             console.error('Module not found:', moduleId);
+            Utils.showToast('Error: Module content missing!', 'error');
             return;
         }
 
@@ -506,6 +1522,11 @@ const Modules = {
         // Give rewards
         GameState.addCoins(levelData.reward.coins);
 
+        // Accountability Score
+        if (this.currentModuleId === 'accountability-gym') {
+            GameState.addResponsibility(10);
+        }
+
         let rewardMessage = levelData.reward.message;
 
         // Check for badge
@@ -523,17 +1544,6 @@ const Modules = {
 
         // Move to next level
         this.currentLevelIndex++;
-
-        // Wait for popup to close then render next level
-        // Note: The popup removes itself, but we need to trigger the next render
-        // We can hook into the popup close or just wait a bit? 
-        // Better: The popup is modal, user clicks close. We can re-render then?
-        // Actually createRewardPopup doesn't take a callback. 
-        // Let's just re-render immediately behind the popup or modify createRewardPopup to take a callback?
-        // For now, let's just re-render. The popup is fixed position so it will stay on top.
-
-        // Auto-advance removed in favor of manual navigation
-        // Just show reward and let user click Next
     },
 
     /**
@@ -541,9 +1551,6 @@ const Modules = {
      */
     completeModule() {
         GameState.completeModule(this.currentModuleId);
-
-        // Unlock next module logic could go here if we had linear progression
-        // For now, just go back to village
 
         Components.createRewardPopup({
             icon: '🏆',

@@ -31,7 +31,8 @@ const GameState = {
             questionsAnswered: 0,
             correctAnswers: 0,
             modulesCompleted: 0,
-            timeSpent: 0
+            timeSpent: 0,
+            responsibilityScore: 0
         },
         settings: {
             soundEnabled: true,
@@ -100,6 +101,15 @@ const GameState = {
         this.state.stats.totalPoints += amount;
         this.save();
         return this.state.inventory.coins;
+    },
+
+    /**
+     * Add responsibility score
+     */
+    addResponsibility(amount) {
+        this.state.stats.responsibilityScore += amount;
+        this.save();
+        return this.state.stats.responsibilityScore;
     },
 
     /**

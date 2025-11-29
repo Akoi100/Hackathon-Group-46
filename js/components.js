@@ -186,20 +186,28 @@ const Components = {
     /**
      * Create reward popup
      */
-    createRewardPopup(reward) {
+    createRewardPopup(reward, onClose = null) {
         const content = `
             <div style="text-align: center;">
                 <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">${reward.icon}</div>
                 <h2 style="margin-bottom: var(--spacing-md);">${reward.title}</h2>
                 <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">${reward.message}</p>
                 ${reward.coins ? `<div style="font-size: var(--font-size-2xl); color: var(--color-primary); font-weight: bold; margin-bottom: var(--spacing-lg);">+${reward.coins} 🪙</div>` : ''}
-                <button class="btn btn-primary btn-lg btn-block" onclick="this.closest('[style*=fixed]').remove()">Awesome!</button>
+                <button class="btn btn-primary btn-lg btn-block" id="reward-close-btn">Awesome!</button>
             </div>
         `;
 
         Utils.createConfetti();
         Utils.playSound('success');
-        return Components.createModal(content);
+
+        const modal = Components.createModal(content, onClose);
+
+        modal.querySelector('#reward-close-btn').onclick = () => {
+            modal.remove();
+            if (onClose) onClose();
+        };
+
+        return modal;
     },
 
     /**
@@ -267,5 +275,153 @@ const Components = {
         }
 
         return loader;
+    },
+
+    /**
+     * Create Calculator (Hidden Vault Entry)
+     */
+    createCalculator(onUnlock) {
+        const container = document.createElement('div');
+        container.className = 'card';
+        container.style.maxWidth = '300px';
+        container.style.margin = '0 auto';
+        container.style.padding = '20px';
+        container.style.background = '#222';
+        container.style.color = 'white';
+
+        const display = document.createElement('div');
+        display.style.cssText = `
+            background: #333;
+            color: white;
+            font-size: 2rem;
+            text-align: right;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            min-height: 60px;
+        `;
+        display.textContent = '0';
+        container.appendChild(display);
+
+        const grid = document.createElement('div');
+        grid.style.cssText = 'display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;';
+
+        const buttons = [
+            'C', '÷', '×', '⌫',
+            '7', '8', '9', '-',
+            '4', '5', '6', '+',
+            '1', '2', '3', '=',
+            '0', '.'
+        ];
+
+        let currentInput = '';
+
+        buttons.forEach(btn => {
+            const button = document.createElement('button');
+            button.textContent = btn;
+            button.style.cssText = `
+                padding: 15px;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 8px;
+                background: ${['C', '⌫'].includes(btn) ? '#EF4444' : (['=', '+', '-', '×', '÷'].includes(btn) ? '#F59E0B' : '#444')};
+                color: white;
+                cursor: pointer;
+                grid-column: ${btn === '0' ? 'span 2' : 'auto'};
+            `;
+
+            button.onclick = () => {
+                if (btn === 'C') {
+                    currentInput = '';
+                    display.textContent = '0';
+                } else if (btn === '⌫') {
+                    currentInput = currentInput.slice(0, -1);
+                    display.textContent = currentInput || '0';
+                } else if (btn === '=') {
+                    // SECRET CODE CHECK
+                    if (currentInput === '1234') {
+                        onUnlock();
+                    } else {
+                        try {
+                            // Safe eval for demo
+                            // eslint-disable-next-line no-new-func
+                            display.textContent = new Function('return ' + currentInput.replace('×', '*').replace('÷', '/'))();
+                            currentInput = display.textContent;
+                        } catch (e) {
+                            display.textContent = 'Error';
+                            currentInput = '';
+                        }
+                    }
+                } else {
+                    if (display.textContent === '0' || display.textContent === 'Error') {
+                        currentInput = btn;
+                    } else {
+                        currentInput += btn;
+                    }
+                    display.textContent = currentInput;
+                }
+            };
+            grid.appendChild(button);
+        });
+
+        container.appendChild(grid);
+        return container;
+    },
+
+    /**
+     * Create Vault Interface
+     */
+    createVault() {
+        const container = document.createElement('div');
+        container.className = 'card';
+        container.style.background = '#1F2937';
+        container.style.color = 'white';
+
+        container.innerHTML = `
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #374151; padding-bottom: 15px;">
+                <h2 style="margin: 0;">🔒 Secure Vault</h2>
+                <div style="font-size: 0.8rem; color: #9CA3AF;">Encrypted Local Storage</div>
+            </div>
+            
+            <div class="tabs" style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <button class="btn btn-sm btn-primary active" data-tab="notes">📝 Notes</button>
+                <button class="btn btn-sm btn-ghost" data-tab="photos">📷 Photos</button>
+                <button class="btn btn-sm btn-ghost" data-tab="audio">🎤 Audio</button>
+            </div>
+
+            <div id="vault-content">
+                <!-- Dynamic Content -->
+                <div id="notes-view">
+                    <button class="btn btn-primary btn-sm" style="margin-bottom: 15px;">+ New Secure Note</button>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div style="background: #374151; padding: 15px; border-radius: 8px;">
+                            <div style="font-weight: bold; margin-bottom: 5px;">Incident Report - 12/05</div>
+                            <div style="font-size: 0.9rem; color: #D1D5DB;">Harassment received via DM...</div>
+                        </div>
+                        <div style="background: #374151; padding: 15px; border-radius: 8px;">
+                            <div style="font-weight: bold; margin-bottom: 5px;">Emergency Contacts</div>
+                            <div style="font-size: 0.9rem; color: #D1D5DB;">Lawyer: 555-0123...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Simple Tab Logic
+        const tabs = container.querySelectorAll('.tabs button');
+        tabs.forEach(tab => {
+            tab.onclick = () => {
+                tabs.forEach(t => {
+                    t.classList.remove('btn-primary', 'active');
+                    t.classList.add('btn-ghost');
+                });
+                tab.classList.remove('btn-ghost');
+                tab.classList.add('btn-primary', 'active');
+                Utils.showToast(`${tab.textContent} view coming soon`, 'info');
+            };
+        });
+
+        return container;
     }
 };
