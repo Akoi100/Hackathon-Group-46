@@ -1,0 +1,33 @@
+# Transforming Masculinity: Awareness Through Gaming
+
+## Overview
+This game raises awareness about digital abuse and online harassment. It aims to transform masculinity by helping men recognize their role in harmful online behavior while empowering women to identify and report abuse. The game combines interactive storytelling, real-life inspired scenarios, and educational modules.
+
+## Features
+- **Interactive Modules:** Each level covers a topic on digital abuse, based on real-life stories.
+- **Men’s Perspective:** Helps men reflect on their online behavior and its consequences.
+- **Women’s Perspective:** Teaches women what constitutes abuse and how to report it safely.
+- **Reporting System:** Players can practice reporting abuse and receive guidance.
+- **Level-Based Learning:** Modules increase in complexity to encourage deeper understanding.
+
+## Gameplay
+- **Scenarios:** Players encounter situations inspired by real events.
+- **Decision-Making:** Choices influence outcomes and show consequences.
+- **Reflection:** Modules include prompts to foster self-awareness.
+- **Rewards:** Completion of modules unlocks advanced levels and new stories.
+
+## Objectives
+- Educate men on their contribution to online harassment.
+- Empower women to recognize and report abuse.
+- Promote empathy, respectful online interactions, and digital citizenship.
+
+## Technologies
+- Unity / Unreal Engine (for development)
+- Web or mobile platforms (for accessibility)
+- Database to store stories, reports, and user progress
+
+## Contributing
+We welcome contributions to expand scenarios, enhance modules, and improve gameplay. Submit issues or pull requests with ideas, real-life stories, or code improvements.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
