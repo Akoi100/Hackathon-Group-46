@@ -36,6 +36,19 @@ By making learning fun and accessible, we empower users to navigate the digital 
 *   **Reward System:** Earn "Safe-Coins" and badges to customize your in-app avatar.
 *   **Progress Tracking:** Visual progress bars to motivate continued learning.
 
+
+## 🔗 Live Links
+
+### 🌐 Live Deployment
+Experience SkillUp Safe right in your browser:
+**[https://hackathon-group-46-qfcde12ei-akoi100s-projects.vercel.app](https://hackathon-group-46-qfcde12ei-akoi100s-projects.vercel.app)**
+
+### 📊 Pitch Deck
+View our project presentation and business case:
+**[https://www.canva.com/design/DAG6E8m9wWI/view](https://www.canva.com/design/DAG6E8m9wWI/view)**
+
+
+
 ## 🛠️ Tech Stack
 
 *   **Frontend:** html, css & javascript  (for cross-platform mobile development)
@@ -45,36 +58,34 @@ By making learning fun and accessible, we empower users to navigate the digital 
 
 ### Prerequisites
 
-*   Node.js / Python
-*   npm / yarn / pip
-*   A mobile emulator or physical device for testing.
+*   A modern web browser (Chrome, Firefox, Safari, Edge)
+*   A code editor like VS Code (recommended)
+*   Live Server extension for VS Code (optional but recommended)
 
-### Installation
+### Installation & Running
 
-1.  Clone the repo
+1.  **Clone the repo**
     ```bash
     git clone https://github.com/your-username/skillup-safe.git
     cd skillup-safe
     ```
-2.  Install NPM packages (example for a React Native project)
-    ```bash
-    npm install
-    ```
-3.  (For iOS)
-    ```bash
-    cd ios && pod install && cd ..
-    ```
-4.  Start the development server
-    ```bash
-    npx react-native run-android
-    # or
-    npx react-native run-ios
-    ```
+
+2.  **Open with Live Server (Recommended)**
+    *   Install the "Live Server" extension in VS Code
+    *   Right-click on `index.html` and select "Open with Live Server"
+    *   The application will automatically open in your default browser
+
+3.  **Alternative: Open directly in browser**
+    *   Simply double-click the `index.html` file to open it in your browser
+    *   *Note: Some features may not work correctly with this method due to browser security restrictions*
+
+The application will be running locally at `http://127.0.0.1:5500` or similar port.
 
 ## 📱 Project Screenshots (To be Added)
 
 | Onboarding | Digital Village Map | Quiz Module |
 ![App Screenshot](image.png)
+
 
 
 ## 🤝 How to Contribute
