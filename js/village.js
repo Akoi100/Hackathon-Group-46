@@ -284,26 +284,32 @@ const Village = {
                 <h3>SkillUp Safe</h3>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
-                <button class="btn btn-ghost" style="justify-content: flex-start;" id="nav-profile">
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md); width: 100%;">
+                <button class="btn btn-ghost" style="justify-content: flex-start; width: 100%; text-align: left;" id="nav-profile">
                     👤 My Profile
                 </button>
-                <button class="btn btn-ghost" style="justify-content: flex-start;" id="nav-device-check">
+                <button class="btn btn-ghost" style="justify-content: flex-start; width: 100%; text-align: left;" id="nav-device-check">
                     📱 Device Safety Check
                 </button>
-                <button class="btn btn-ghost" style="justify-content: flex-start;" id="nav-calculator">
+                <button class="btn btn-ghost" style="justify-content: flex-start; width: 100%; text-align: left;" id="nav-trauma-support">
+                    ❤️ Trauma-Informed Support
+                </button>
+                <button class="btn btn-ghost" style="justify-content: flex-start; width: 100%; text-align: left;" id="nav-sos-gesture">
+                    👋 Quick SOS Gesture
+                </button>
+                <button class="btn btn-ghost" style="justify-content: flex-start; width: 100%; text-align: left;" id="nav-calculator">
                     🧮 Calculator
                 </button>
-                <button class="btn btn-ghost" style="justify-content: flex-start;" id="nav-settings">
+                <button class="btn btn-ghost" style="justify-content: flex-start; width: 100%; text-align: left;" id="nav-settings">
                     ⚙️ Settings
                 </button>
-                <button class="btn btn-ghost" style="justify-content: flex-start;" id="nav-help">
+                <button class="btn btn-ghost" style="justify-content: flex-start; width: 100%; text-align: left;" id="nav-help">
                     ❓ Help
                 </button>
             </div>
 
             <div style="margin-top: auto;">
-                <button class="btn btn-danger btn-block" id="nav-logout">
+                <button class="btn btn-danger btn-block" id="nav-logout" style="width: 100%;">
                     🚪 Logout
                 </button>
             </div>
@@ -312,6 +318,8 @@ const Village = {
         // Event Listeners
         pane.querySelector('#nav-profile').onclick = () => this.renderProfilePark();
         pane.querySelector('#nav-device-check').onclick = () => this.renderDeviceCheck();
+        pane.querySelector('#nav-trauma-support').onclick = () => Utils.showToast('Support resources would appear here.', 'info');
+        pane.querySelector('#nav-sos-gesture').onclick = () => Utils.showToast('Triple-tap top right corner for SOS!', 'warning');
         pane.querySelector('#nav-calculator').onclick = () => this.renderCalculator();
         pane.querySelector('#nav-settings').onclick = () => this.renderSettings();
         pane.querySelector('#nav-help').onclick = () => this.renderHelp();
@@ -642,9 +650,13 @@ const Village = {
         const accessBtn = document.createElement('button');
         accessBtn.className = 'btn btn-ghost btn-sm';
         accessBtn.innerHTML = '👁️ Accessibility';
-        accessBtn.style.position = 'absolute';
-        accessBtn.style.top = '20px';
+        accessBtn.style.position = 'fixed';
+        accessBtn.style.bottom = '20px';
         accessBtn.style.right = '20px';
+        accessBtn.style.zIndex = '1000';
+        accessBtn.style.background = 'var(--glass-bg)';
+        accessBtn.style.backdropFilter = 'blur(10px)';
+        accessBtn.style.border = '1px solid var(--glass-border)';
         accessBtn.onclick = () => {
             document.body.classList.toggle('high-contrast');
             const isHighContrast = document.body.classList.contains('high-contrast');
@@ -676,8 +688,8 @@ const Village = {
 
         // Filter modules: ONLY show Profile + Gender Specific
         let visibleModules = this.modules.filter(module => {
-            // Always show Profile Park
-            if (module.id === 'profile-park') return true;
+            // Hide Profile Park from grid (only accessible via sidebar)
+            if (module.id === 'profile-park') return false;
 
             // Show gender-specific modules for this user
             if (module.gender && module.gender.includes(userGender)) return true;
@@ -879,10 +891,11 @@ const Village = {
 
         // Reset Logic
         content.querySelector('#reset-btn').onclick = () => {
-            if (confirm('Are you sure you want to reset all your progress? This cannot be undone!')) {
-                GameState.reset();
+            if (confirm('Are you sure you want to reset your progress? This will clear your levels and coins, but keep your profile.')) {
+                GameState.resetProgress();
                 Utils.playSound('success');
-                location.reload();
+                Village.render();
+                Utils.showToast('Progress reset successfully!', 'success');
             }
         };
 

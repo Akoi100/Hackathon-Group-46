@@ -86,6 +86,21 @@ const GameState = {
     },
 
     /**
+     * Reset progress only (keep user profile)
+     */
+    resetProgress() {
+        // Keep user and settings, reset everything else
+        const currentUser = { ...this.state.user };
+        const currentSettings = { ...this.state.settings };
+        
+        this.state = { ...this.defaultState };
+        this.state.user = currentUser;
+        this.state.settings = currentSettings;
+        
+        this.save();
+    },
+
+    /**
      * Update user profile
      */
     updateUser(userData) {
